@@ -32,7 +32,7 @@ void main(void)
 
 	while (1)
 	{
-		getchar();    //주사위를 던지기 위해서는 엔터키를 눌러야 한다.
+		//주사위를 던지기 위해서는 엔터키를 눌러야 한다.
 		//주사위 던지기 (1부터 6까지)
 		dice = rand() % 6 + 1;
 		position = position + dice;
@@ -47,7 +47,13 @@ void main(void)
 			position = 3;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		}
-
+		
+		if (position == 15)
+		{
+			printf("주식이 떨어져 200만원이 차감됩니다.\n");
+			money -= 2000000;
+			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+		}
 		if (position > 61)
 		{
 			printf("축하합니다. 목적지에 도달하였습니다.\n");
