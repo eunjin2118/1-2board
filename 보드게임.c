@@ -37,9 +37,17 @@ void main(void)
 		dice = rand() % 6 + 1;
 		position = position + dice;
 		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
-		printf("현재위치 : %d\n\n", position, money);
+		printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		getchar();
 		
+		//7번에 있을때는 3번으로 이동
+		if (position == 7)
+		{
+			printf("3번 위치로 이동합니다.");
+			position = 3;
+			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+		}
+
 		if (position > 61)
 		{
 			printf("축하합니다. 목적지에 도달하였습니다.\n");
