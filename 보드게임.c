@@ -7,6 +7,9 @@
 *		- 아이템 인벤토리 (나중에 가능하면)
 *   3. 파산
 *       -가진돈이 0이하인 경우
+*	4. 완료조건
+*		-말이 61번째 위치에만 있어야 한다
+* 
 */
 
 
@@ -57,13 +60,25 @@ void main(void)
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		}
 
+		if (position > 61)
+		{
+			printf("61을 넘었기때문에 무효저리 합니다");
+			//무효처리를 하기위한 코드 
+			position = position - dice;
+			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+
+		}
+
+		///게임이 끝나는 시나리오
 		//파산처리
 		if (money <= 0)
 		{
 			printf("파산하였습니다ㅠㅠㅠ.\n");
 			break; //while 끝
 		}
-		if (position > 61)
+		
+		//61 위치에만 있어야 게임을 끝낸다
+		if (position == 61)
 		{
 			printf("축하합니다. 목적지에 도달하였습니다.\n");
 			break;
