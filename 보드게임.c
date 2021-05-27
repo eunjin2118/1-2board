@@ -40,7 +40,7 @@ void main(void)
 		getchar();//주사위를 던지기 위해서는 엔터키를 눌러야 한다.
 		//주사위 던지기 (1부터 6까지)
 		dice = rand() % 6 + 1;
-		position = position + dice;
+		position += dice;
 		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 		printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		getchar();
@@ -62,9 +62,9 @@ void main(void)
 
 		if (position > MAX_LENGTH)
 		{
-			printf("%D을 넘었기때문에 무효저리 합니다, \n", MAX_LENGTH);
+			printf("%d을 넘었기때문에 무효저리 합니다, \n", MAX_LENGTH);
 			//무효처리를 하기위한 코드 
-			position = position - dice;
+			position -= dice;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 
 		}
