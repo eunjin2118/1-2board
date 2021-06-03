@@ -60,6 +60,12 @@ void main(void)
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		}
 
+		if (position == 20)
+		{
+			printf("위치 20에 있어서 재산의 20%를 기부합니다");
+			money *=0.8;
+			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+		}
 		if (position > MAX_LENGTH)
 		{
 			printf("%d을 넘었기때문에 무효저리 합니다, \n", MAX_LENGTH);
