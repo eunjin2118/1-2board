@@ -44,27 +44,25 @@ void main(void)
 		printf("주사위를 던져서 %d가 나왔습니다.\n", dice);
 		printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 		getchar();
-		
-		//7번에 있을때는 3번으로 이동
-		if (position == 7)
+
+
+		switch (position)
 		{
+		case 7:
 			printf("3번 위치로 이동합니다.");
 			position = 3;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
-		}
-		
-		if (position == 15)
-		{
+			break;
+		case 15:
 			printf("주식이 떨어져 200만원이 차감됩니다.\n");
 			money -= 2000000;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
-		}
-
-		if (position == 20)
-		{
+			break;
+		case 20:
 			printf("위치 20에 있어서 재산의 20%를 기부합니다");
-			money *=0.8;
+			money *= 0.8;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+			break; 
 		}
 		if (position > MAX_LENGTH)
 		{
