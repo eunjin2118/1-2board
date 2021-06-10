@@ -63,6 +63,15 @@ void main(void)
 			money *= 0.8;
 			printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
 			break; 
+		case 52:
+			printf("위치 52 무인도에 갇혔습니다.\n");
+			for (int i = 1; i <= 3; i++)
+			{
+				getchar(); //엔터를 눌러야지만 ㄱㄱ
+				printf("%d번째 입니다.\n", i);
+			}
+				printf("현재위치 : %d, 가진돈 : %d\n\n", position, money);
+				break;
 		}
 		if (position > MAX_LENGTH)
 		{
