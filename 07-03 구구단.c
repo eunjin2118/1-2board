@@ -3,18 +3,18 @@
 void main(void)
 {
 	int dan = 2;
-	/*for (int i = 1; i <= 9; i++)
+	for (int i = 1; i <= 9; i++)
 	{
 		printf("%d X %d = %d\n", dan, i, dan * i);
 	}
-	*/
+	/*
 	int i = 1;
 	while (i <= 9)
 	{
 		printf("%d X %d = %d\n", dan, i, dan * i);
 		i++;
 	}
-
+	*/
 	/*
 	printf("%d X 1 = %d\n", dan, dan * 1);
 	printf("%d X 2 = %d\n", dan, dan * 2);
