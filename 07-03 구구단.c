@@ -12,8 +12,9 @@ void main(void)
 		for (int i = 1; i <= 9; i++)
 		{
 			if (i == 5) {
-				break; //이거를 출력문 뒤에쓰면 5까지 출력됨
+				continue; //이거를 출력문 뒤에쓰면 5까지 출력됨
 					//안쪽for문을 벗어난다
+					//한턴을 쉰다
 			}
 			printf("%d X %d = %d\n", dan, i, dan * i);
 		}
