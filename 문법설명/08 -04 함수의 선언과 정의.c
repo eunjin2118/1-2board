@@ -1,13 +1,24 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
-void sum(void)
-{
-	int a = 3;
-	printf("%d\n", a);
-	printf("%d\n", a + 1);
-}
+// 함수의 선언(declaration)
+int sum(int a, int b);
+int sum2(int a, int b);
 
 void main(void)
 {
-	sum();
+	int c = 5;
+	int d = 6;
+	int aaaaa = sum(c, d);
+	printf("%d", aaaaa);
+}
+
+// 함수의 정의(definition)
+int sum(int a, int b)
+{
+	return sum2(a, b);
+}
+
+int sum2(int a, int b)
+{
+	return a * b;
 }
