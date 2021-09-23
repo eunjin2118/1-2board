@@ -11,4 +11,5 @@ void main(void)
 	printf("ptr 안에 들어있는 값 %p\n", ptr);
 	// 포인터 변수도 별도의 메모리 주고(공간)에 할당됨
 	printf("ptr의 메모리 주소값 %p\n", &ptr);
+	printf("ptr이 가르키는 변수 안에 들어있는 값 %d\n", *ptr);
 }
